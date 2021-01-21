@@ -2,6 +2,7 @@
 pagination:
   data: collections.post
   size: 6
+  path: "/"
   alias: posts
   reverse: true
 permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
@@ -11,8 +12,9 @@ permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1
 
 {% block body %}
   {% include "posts.njk" %}
-
   {% include "nav.njk" %}
+  {% include "projects.njk" %}
+
 
   {# {% include "tags.njk" %} #}
   

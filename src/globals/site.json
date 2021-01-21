@@ -1,11 +1,11 @@
 {
-  "name": "11r",
+  "name": "dsoto",
   "description": "america's favorite eleventy blog template",
-  "url": "https://reeseschultz.github.io",
-  "baseUrl": "/11r/",
+  "url": "https://dsoto.dev",
+  "baseUrl": "/",
   "author": {
-    "handle": "@ReeseCodes",
-    "name": "Reese Schultz"
+    "handle": "@sotoplatero",
+    "name": "dsoto"
   },
   "images": {
     "twitter": "twitter.jpg",

@@ -13,7 +13,7 @@ module.exports = (config) => {
   config.addPassthroughCopy({ public: './' });
 
   config.setBrowserSyncConfig({
-    files: ['dist/**/*'],
+    files: ['dist/*'],
     open: true,
   });
 

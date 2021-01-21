@@ -1,8 +1,8 @@
 {/* Font (see https://fonts.google.com) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');*/
 
 /* Prism Code Highlighting Theme (see https://prismjs.com) */
-@import url('https://cdn.jsdelivr.net/npm/prism-themes@1.5.0/themes/prism-dracula.css');
+/*@import url('https://cdn.jsdelivr.net/npm/prism-themes@1.5.0/themes/prism-dracula.css');*/
 
 :not(pre) > code[class*="language-"] { /* Fixes issue where theme removes indentation. */
   white-space: pre;
@@ -10,8 +10,9 @@
 
 html,
 body {
-  @apply antialiased text-gray-400 bg-gray-900;
-  font-family: 'Open Sans', sans-serif;
+  @apply antialiased text-gray-300 bg-gray-900;
+
+  /*font-family: 'Open Sans', sans-serif;*/
 }
 
 h1,
@@ -40,15 +41,15 @@ a {
 }
 
 h1 {
-  @apply text-2xl;
+  @apply text-4xl;
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-4xl;
 }
 
 h3 {
-  @apply text-lg;
+  @apply text-3xl;
 }
 
 a {
@@ -60,7 +61,7 @@ a:hover {
 }
 
 p {
-  @apply text-lg;
+  @apply text-xl leading-normal text-justify;
 }
 
 pre {

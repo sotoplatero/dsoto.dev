@@ -1,0 +1,14 @@
+<div class="mb-8">
+    <h3>Proyectos</h3>
+    <p>Cuando tengo una idea la hago "proyecto"</p>
+</div>
+<div class="space-y-4">
+    {% for project in collections.project %}
+        <div class="flex-grow">
+            <a class="" href="{{ project.data.url | url }}" target="_black">
+                <div class="block font-bold text-lg">{{ project.data.title }}</div>
+                <p>{{ project.data.excerpt }}</p>
+            </a>
+        </div>
+    {% endfor %}
+</div>
