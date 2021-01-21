@@ -7,11 +7,11 @@ module.exports = {
       './src/**/*.md',
     ],
   },
-  plugins: [require('@tailwindcss/forms')],
+  // plugins: [require('@tailwindcss/forms')],
   theme: {
     extend: {
       fontFamily: {
-        inter: '"Inter", sans-serif;',
+        // inter: '"Inter", sans-serif;',
       },
     },
   }

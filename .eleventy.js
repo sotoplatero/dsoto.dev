@@ -1,8 +1,12 @@
 const siteSettings = require('./src/globals/site.json');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (config) => {
-  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
-  config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'),{
+  	trim: true,
+  	lineSeparator: "<br>",
+  });
+  config.addPlugin( pluginRss );
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
 
