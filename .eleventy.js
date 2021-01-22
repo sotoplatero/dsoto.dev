@@ -4,7 +4,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = (config) => {
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'),{
   	trim: true,
-  	lineSeparator: "<br>",
+    alwaysWrapLineHighlights: true,
   });
   config.addPlugin( pluginRss );
 

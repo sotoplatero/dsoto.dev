@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply antialiased text-gray-300 bg-gray-900;
+  @apply antialiased text-gray-700 dark:bg-gray-800 dark:text-gray-300;
 
   /*font-family: 'Open Sans', sans-serif;*/
 }
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-5xl leading-snug;
 }
 
 h3 {

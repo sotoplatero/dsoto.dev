@@ -5,17 +5,11 @@ pagination:
   path: "/"
   alias: posts
   reverse: true
-permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 {% extends 'page.njk' %}
 
 {% block body %}
-  {% include "posts.njk" %}
-  {% include "nav.njk" %}
+  {% include "lastest.njk" %}
   {% include "projects.njk" %}
-
-
-  {# {% include "tags.njk" %} #}
-  
 {% endblock %}

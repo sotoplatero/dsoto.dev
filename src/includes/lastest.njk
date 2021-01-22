@@ -1,0 +1,23 @@
+<div class="space-y-4" >
+
+    {% for post in posts %}
+        {% if not post.data.draft %}
+            <div class="flex mr-auto">
+                <span class="flex-grow">
+                    <a class="block font-bold text-lg" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </span>
+
+                <span 
+                    class="created-date"
+                    datetime="{{ post.data.date }}"
+                >
+                    {{ post.data.date | dateDisplay }}
+                </span>
+            </div>
+        {% endif %}
+    {% endfor %}
+    {% if (post.length > 1) %}
+        <a href="/posts">Todos los escritos</a>    
+    {% endif %}
+    
+</div>

@@ -2,15 +2,13 @@
     <div class="md:flex justify-evenly mt-8">
         <div class="flex justify-between mx-auto w-full">
             {% if pagination.href.previous %}
-                <div class="mx-auto mb-4">
-                    <a class="previous-page" href="{{ pagination.href.previous | url }}">Next Page</a>
-                </div>
+                <a class="" href="{{ pagination.href.previous | url }}">
+                     Próximo
+                </a>
             {% endif %}
 
             {% if pagination.href.next %}
-                <div class="mx-auto mb-4">
-                    <a class="next-page md:mb-2" href="{{ pagination.href.next | url }}">Previous Page</a>
-                </div>
+                <a class="text-lg" href="{{ pagination.href.next | url }}">&laquo; Anterior</a>
             {% endif %}
         </div>
 
@@ -30,8 +28,8 @@
         </div>
     </div>
 
-    <p class="text-center text-sm italic mb-10">(On page
+{#     <p class="text-center text-sm italic mb-10">(On page
         {{ pagination.pageNumber + 1 }}
         of
-        {{ pagination.pages.length }}.)</p>
+        {{ pagination.pages.length }}.)</p> #}
 </div>
