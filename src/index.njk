@@ -2,18 +2,14 @@
 pagination:
   data: collections.post
   size: 6
+  path: "/"
   alias: posts
   reverse: true
-permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 {% extends 'page.njk' %}
 
 {% block body %}
-  {% include "posts.njk" %}
-
-  {% include "nav.njk" %}
-
-  {# {% include "tags.njk" %} #}
-  
+  {% include "lastest.njk" %}
+  {% include "projects.njk" %}
 {% endblock %}

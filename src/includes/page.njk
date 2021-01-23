@@ -15,19 +15,21 @@
     <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:site" content="{{ site.author.handle }}">
     <meta name="twitter:creator" content="{{ site.author.handle }}">
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseUrl }}{{ site.images.twitter }}">
+    <meta name="twitter:image:src" content="http://usecard.netlify.app/url=https://dsoto.dev?theme=flat">
 
     {# Open Graph #}
     <meta name="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
     <meta name="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="og:image" content="{{ site.url }}{{ site.baseUrl }}{{ site.images.og }}">
+    <meta name="og:image" content="http://usecard.netlify.app/url=https://dsoto.dev?theme=flat">
     <meta name="og:url" content="{{ site.url }}{{ site.baseUrl }}">
     <meta name="og:site_name" content="{{ site.name }}">
     <meta name="og:locale" content="en_GB">
     <meta name="og:type" content="website">
-    
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for my dsoto.dev" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+json" title="RSS Feed for my dsoto.dev" href="/feed.json" />
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.jpg" />
 
     <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %}{% if metaTitle or title %} | {% endif %}{{ site.name }}</title>
 
@@ -38,7 +40,7 @@
   <body class="flex flex-col min-h-screen">
     {# {% include 'top-notice.njk' %} #}
     {% include 'header.njk' %}
-    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+    <main class="container mx-auto max-w-3xl p-8 pt-16 flex-grow">
       {% block body %}{% endblock %}
     </main>
     {% include 'footer.njk' %}

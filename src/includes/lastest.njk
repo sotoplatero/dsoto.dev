@@ -1,18 +1,11 @@
-<div class="space-y-4">
+<div class="space-y-4" >
+
     {% for post in posts %}
         {% if not post.data.draft %}
             <div class="flex mr-auto">
                 <span class="flex-grow">
                     <a class="block font-bold text-lg" href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </span>
-
-                {# <p class="excerpt">{{ post.data.excerpt }}</p> #}
-
-{#                 {% for tag in post.data.tags %}
-                    {%- if tag !== "post" -%}
-                        <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}">{{ tag }}</a>
-                    {%- endif -%}
-                {% endfor %} #}
 
                 <span 
                     class="created-date"
@@ -23,4 +16,8 @@
             </div>
         {% endif %}
     {% endfor %}
+    {% if (post.length > 1) %}
+        <a href="/posts">Todos los escritos</a>    
+    {% endif %}
+    
 </div>

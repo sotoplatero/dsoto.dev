@@ -1,6 +1,5 @@
 module.exports = (date) =>
-  new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'numeric',
+  new Date(date).toLocaleDateString('es-ES', {
+    month: 'short',
     day: 'numeric',
   });

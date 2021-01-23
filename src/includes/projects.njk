@@ -1,0 +1,15 @@
+<div class="mt-12 mb-8">
+    <h3>Proyectos</h3>
+    <p>Cuando tengo una idea la hago "proyecto"</p>
+</div>
+<div class="space-y-6">
+    {% for project in collections.project %}
+        <div class="flex ">
+            <span class="text-4xl mr-2">{{ project.data.emoji }}</span>
+            <a class="" href="{{ project.data.url | url }}" target="_black">
+                <div class="block font-bold text-lg">{{ project.data.title }}</div>
+                <p>{{ project.data.excerpt }}</p>
+            </a>
+        </div>
+    {% endfor %}
+</div>

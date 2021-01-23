@@ -1,0 +1,36 @@
+---
+pagination:
+  data: collections.post
+  size: 25
+  path: "/"
+  alias: posts
+  reverse: true
+permalink: "/posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+{% extends 'page.njk' %}
+
+{% block body %}
+
+    <div class="space-y-4">
+        {% for post in posts %}
+            {% if not post.data.draft %}
+                <div class="flex mr-auto">
+                    <span class="flex-grow">
+                        <a class="block font-bold text-lg" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    </span>
+
+                    <span 
+                        class="created-date"
+                        datetime="{{ post.data.date }}"
+                    >
+                        {{ post.data.date | dateDisplay }}
+                    </span>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% include "nav.njk" %}
+  
+{% endblock %}
