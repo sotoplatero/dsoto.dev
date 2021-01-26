@@ -5,17 +5,8 @@
                 <span class="flex-grow">
                     <a class="block font-bold text-lg" href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </span>
-
-                {# <p class="excerpt">{{ post.data.excerpt }}</p> #}
-
-{#                 {% for tag in post.data.tags %}
-                    {%- if tag !== "post" -%}
-                        <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}">{{ tag }}</a>
-                    {%- endif -%}
-                {% endfor %} #}
-
                 <span 
-                    class="created-date"
+                    class="whitespace-nowrap"
                     datetime="{{ post.data.date }}"
                 >
                     {{ post.data.date | dateDisplay }}

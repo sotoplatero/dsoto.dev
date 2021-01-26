@@ -4,11 +4,11 @@
         {% if not post.data.draft %}
             <div class="flex mr-auto">
                 <span class="flex-grow">
-                    <a class="block font-bold text-lg" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    <a class="block font-semibold text-normal md:text-lg " href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </span>
 
                 <span 
-                    class="created-date"
+                    class="created-date whitespace-nowrap"
                     datetime="{{ post.data.date }}"
                 >
                     {{ post.data.date | dateDisplay }}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Un post cada día por un mes. 
+title: Reto. Un post por día por un mes.
 excerpt: Crear una API muy sencilla utilizando las funciones de Netlify.
 date: 2021-01-25
 tags: post
