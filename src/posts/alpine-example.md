@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Alpine el nuevo jQuery reactivo
-excerpt: ♫ Interior Crocodile Alligator, I Drive a Chevrolet Movie Theater ♫
+excerpt: Alpine es tan versatil, tan fácil y poderoso que parece el nuevo jQuery reactivo, te ofrece la pontencia de vue, react, angular pero sin complicaciones.
 date: 2021-01-24
 tags: post
 ---
 
-Me gusta pensar que [Alpine.js](https://github.com/alpinejs/alpine) es el nuevo jQuery pero reactivo, te ofrece la pontencia de los grandes vue, react, angular pero sin complicaciones. En el repo dice *"Think of it like Tailwind for JavaScript"* porque alpine al igual que tailwindcss manejan el concepto de Utility-first que es el mismo concepto del viejo jQuery.
+[Alpine.js](https://github.com/alpinejs/alpine) es tan versatil, tan fácil y poderoso que puede considerarse el nuevo jQuery pero reactivo, te ofrece la pontencia de los grandes vue, react, angular pero sin complicaciones. En el repo dice *"Think of it like Tailwind for JavaScript"* porque alpine al igual que tailwindcss manejan el concepto de Utility-first que es el mismo concepto del viejo jQuery.
 
 Este post sirva como presentación y te encariñes con alpine.js y para los que lo vieron an algún momento y pasaron de largo, los que no supieron ver su belleza la primera vez...como me pasó a mi, como un amor a segunda vista.
 

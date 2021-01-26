@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reto. Un post por día por un mes.
-excerpt: Crear una API muy sencilla utilizando las funciones de Netlify.
+excerpt: Esto de escribir el blog se está poniendo difícil. No es solo tener la idea, las ideas son infinitas, el problema es tener un plan, organizarse, escribir....
 date: 2021-01-25
 tags: post
 ---
