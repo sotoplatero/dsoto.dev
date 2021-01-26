@@ -6,10 +6,12 @@
     {% for project in collections.project %}
         <div class="flex ">
             <span class="text-4xl mr-2">{{ project.data.emoji }}</span>
-            <a class="" href="{{ project.data.url | url }}" target="_black">
-                <div class="block font-bold text-lg">{{ project.data.title }}</div>
+            <div>
+                <a class="block font-bold text-lg" href="{{ project.data.url | url }}" target="_black">
+                    {{ project.data.title }}
+                </a>
                 <p>{{ project.data.excerpt }}</p>
-            </a>
+            </div>
         </div>
     {% endfor %}
 </div>
