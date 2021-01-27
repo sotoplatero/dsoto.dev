@@ -7,11 +7,11 @@ tags: post
 ---
 
 
-[Webmention](https://indieweb.org/Webmention) es un [estandar web](https://www.w3.org/TR/webmention/) para menciones y conversaciones a travez de la web. A nosotros lo que nos interesa es que vamos a recibir notificaciones cuando una de nuestros post recibe interacciones (likes, retweets, comments, etc) en Twitter
+[Webmention](https://indieweb.org/Webmention) es un [estandar web](https://www.w3.org/TR/webmention/) para menciones y conversaciones a travez de la web. A nosotros lo que nos interesa es que vamos a recibir notificaciones cuando uno de nuestros post recibe interacciones (likes, retweets, comments, etc) en Twitter
 
-El objetivo de las webmetions sean para cualquier tipo de sitio web y desde cualquier red social. Nosotros nos concetraremos en nuestro querido blog y en twitter.
+El objetivo de las webmetions es poco más amplio incluye cualquier tipo de sitio web (no solo blog) y desde cualquier red social (no solo twitter). Nosotros nos concetraremos en nuestro querido blog y en twitter.
 
-Hay montones de tutorial y documentación para implementar las webmetions, este post puede considerarse una version traducida y ampliada de [Adding webmentions to my blog](https://sebastiandedeyne.com/adding-webmentions-to-my-blog/) de [Sebastian De Deyne](https://twitter.com/sebdedeyne)
+Hay montones de tutorial y documentación para implementar las webmentions, este post puede considerarse una version traducida y ampliada de [Adding webmentions to my blog](https://sebastiandedeyne.com/adding-webmentions-to-my-blog/) de [Sebastian De Deyne](https://twitter.com/sebdedeyne)
 
 **DM;MD**
 
