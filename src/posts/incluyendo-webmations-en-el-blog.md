@@ -3,7 +3,7 @@ layout: post
 title: Incluyendo las webmetions en mi blog
 excerpt: Crear una API muy sencilla utilizando las funciones de Netlify.
 date: 2021-01-26
-tags: post
+tags: draft
 ---
 
 
