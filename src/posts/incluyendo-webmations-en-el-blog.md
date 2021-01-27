@@ -2,154 +2,119 @@
 layout: post
 title: Incluyendo las webmetions en mi blog
 excerpt: Crear una API muy sencilla utilizando las funciones de Netlify.
-date: 2021-01-26
-tags: draft
+date: 2021-01-27
+tags: post
 ---
 
 
-*Si ya sabes lo que son las webmetions ve directo al **TL;DR***
+[Webmention](https://indieweb.org/Webmention) es un [estandar web](https://www.w3.org/TR/webmention/) para menciones y conversaciones a travez de la web. A nosotros lo que nos interesa es que vamos a recibir notificaciones cuando una de nuestros post recibe interacciones (likes, retweets, comments, etc) en Twitter
 
+El objetivo de las webmetions sean para cualquier tipo de sitio web y desde cualquier red social. Nosotros nos concetraremos en nuestro querido blog y en twitter.
 
+Hay montones de tutorial y documentación para implementar las webmetions, este post puede considerarse una version traducida y ampliada de [Adding webmentions to my blog](https://sebastiandedeyne.com/adding-webmentions-to-my-blog/) de [Sebastian De Deyne](https://twitter.com/sebdedeyne)
 
-**TL;DR**
+**DM;MD**
 
-La función la desarrollaremos en javascript (netlify solo permite js y go) asi que necesitamos tener instalado [**node**](https://nodejs.org/) y **[yarn](https://yarnpkg.com)** además de una cuenta en github y netlify.
+### Detectar interacciones en twitter sobre cada post publicado 
 
-Vamo pa llá 🏃
+Lo primero es detectar cuando alquien interactúa con la dirección de tu sitio, si alquien le gusta, comenta o retwitea un tweet que contiene la url a tu post necesitamos recibir una notificación. El problema es que twitter no lo hace así que tenemos que valernos de [Bridgy](https://brid.gy) un servicio de la gente de [indieweb](https://indieweb.org) y que se encarga de hacerle el scrape a twitter, detectar las acciones sobre nuestro sitio y notificarnos.
 
-### 1. Preparar el proyecto ###
+Para esto solo tienes que ir [Bridgy](https://brid.gy) y registrarte con tu cuenta twitter que contiene en el perfil tu sitio web. Cuando lo hagas te mostrará las interacciones 
 
-Creamos una carpeta para el proyecto e iniciamos
+![Registro en bridgy](/img/bridgy.jpg)
 
-```bash
-mkdir first-api
-cd first-api
+### Almacenar las menciones
 
-# crea package.json sin preguntar nada
-yarn init -y
+Ahora nuestro sitio recibirá las interacciones en twitter con nuestro sitio y debemos de hacer algo con ello. Lo más conveniente es utilizar Webmentions.io un servicio igual de Indiweb que las procesa y almacena e incluye un filtro de spam para cualquier mención de un bot.
+
+Para que webmentions.io nos indentifique tenemos que incluir en nuestro sitio un link a nuestro perfil en twitter, ten en cuenta incluir `rel="me"`
+
+```html
+<a href="https://twitter.com/sotoplatero" rel="me">@sotoplatero</a>
 ```
 
-Creamos el repo en github y configuramos localmente
+Luego nos registramos con nuestro sitio en [Webmentions.io](https://webmention.io/) y al hacerlo nos indicará incluir en el `<header>` del sitio estos `<link>`
 
-```bash
-echo "# first-api" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/dsoto-blog/first-api.git
-git push -u origin main
+```html
+<link rel="webmention" href="https://webmention.io/dsoto.dev/webmention" />
+<link rel="pingback" href="https://webmention.io/dsoto.dev/xmlrpc" />
 ```
 
-### 2. Creamos la función ###
+Con esto estamos indicando que las menciones que lleguen a nuestro sitio serán recibidas por Webmetion.io
 
-Creamos una carpeta functions y dentro un fichero `msg.js` con el siguiente contenido. 
+### Mostrar las interacciones en el post
+
+Ahora solo nos faltaría mostrar las interacciones en cada post. Para esto podemos consultar la api de webmention.io con el formato `https://webmention.io/api/mentions.jf2?target=httpa://dsoto.dev/posts/incluyendo-webmations-en-el-blog/` y nos devolverá un [json](https://webmention.io/api/mentions.jf2?target=https://dsoto.dev/posts/incluyendo-webmations-en-el-blog/).
+
+Para procesar este json e inyectarlo en nuestro blog podemos utilizar el [script de Sebastian De Deyne script](https://github.com/sebastiandedeyne/sebastiandedeyne.com/blob/f9c19f78e7a7b57562059a62154f0c9d9641267b/assets/js/webmentions.js) o si lo prefieres incluir mi [propia versión](https://raw.githubusercontent.com/sotoplatero/dsoto.dev/master/src/scripts/webmentions.js) que es la utilizo en este blog.
+
+¿Cómo hacemos? En cada post incluimos un elemento con el atributo `data-webmentions` y el valor seria la url del post actual.
+
+```html
+<div data-webmentions="https://dsoto.dev/posts/incluyendo-webmations-en-el-blog/" ></div>
+```
+
+Igualmente incluimos el [script](https://raw.githubusercontent.com/sotoplatero/dsoto.dev/master/src/scripts/webmentions.js).
 
 ```javascript
-// funstions/msg.js
+const container = document.querySelector("[data-webmentions]");
 
-exports.handler = async (event, context) => {
+if (container) {
+    renderWebmentions(container);
+}
 
-    const { name } = event.queryStringParameters;
+// Render todas las webmentions en el innerHTML del container
+async function renderWebmentions(container) {
+  const target = container.dataset.webmentions;
+  const url = `https://webmention.io/api/mentions.jf2?target=${target}`;
+  const { children: webmentions } = await fetch(url).then( res => res.json() )
 
-    const response = {
-        msg: "Hola API " + name;
-    }
+  if (webmentions.length === 0) return;
 
-    return {
-        statusCode: 200,
-        headers: { 'Content-Type':'application/json'},            
-        body: JSON.stringify(response)  
-    }     
-};
+  let view = webmentions.map( webmention => renderWebmention(webmention) );
+  container.innerHTML = view.join('');
+}
 
+// render una webmetion individual
+function renderWebmention(webmention) {
+
+  const action = {
+    "in-reply-to": "respondió",
+    "like-of": "le gustó",
+    "repost-of": " retwiteó",
+    "mention-of": "mencionó"
+  }[webmention["wm-property"]];
+
+  const receivedAt = new Date(webmention["wm-received"]).toLocaleDateString('es-ES', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+
+  return  `
+    <div class="flex items-center mb-6">
+      <div class="flex-shrink-0 mr-4">
+          <img class="h-8 w-8 rounded-full" loading="lazy" src="${ webmention.author.photo }">
+      </div>
+      <div class="">
+        <div class="space-x-2">
+          <a class="font-semibold" href="${ webmention.author.url }">${ webmention.author.name }</a>
+          <span class="text-gray-700 dark:text-gray-300">
+            <a class="underline" href="${ webmention.url }">${ action }</a>
+          </span>
+          <span class="text-gray-600 dark:text-gray-400">
+            ${ receivedAt }
+          </span>
+        </div>
+        <div class="mt-1">
+            ${ webmention.content ? webmention.content.text : '' }
+        </div>
+      </div>
+  </div>`;
+}
 ```
 
-Esta es un función muy básica donde solo le pasamos el parámetro `name` en la url y respondemos un mensaje. 
+ De forma general este script busca el elemento `[data-webmentions]` en la página actual, consulta la API de webmention.io para obtener un json con las webmetions y  construye un string que se insertará en el elemento `[data-webmentions]`. Por supuesto puedes modificar la estructura y css del html de retorno de la función `renderWebmention`
 
-En la raiz del proyecto incluimos el fichero de configuración de `netlify.toml`
-
-
-```toml
-[build]
-functions = "functions"
-```
-
-Con esto le estamos diciendo a netlify que nuestra funciones están en la carpeta `functions`.
-
-### 3. Desplegamos  ###
-
-Actualizamos el repo
-
-```bash
-git .
-git commit -am "mi primero funcion en netlify" 
-git push
-```
-
-... y creamos el sitio en netlify. 
-
-![primera funcion en netlify](/img/create_my_first_api.jpg)
-
-Si todo sale bien podrás [.netlify/functions/msg?name=soto](https://hungry-cray-9233f0.netlify.app/.netlify/functions/msg?name=soto). En tu caso fíjate en la cabecera del sitio para ver el nombre.
-
-![primera funcion en netlify](/img/header_first_function.jpg)
-
-
-Bueno esta es una función my sencilla solo para conocer el flujo de trabajo. Vamos a probar algo más productivo. Vamos a hacer un pequeño scrapper a la [Gaceta de Cuba](https://www.gacetaoficial.gob.cu/es) para obetener la última gaceta publicada.
-
-Primero instalamos lo necesario [got](https://github.com/sindresorhus/got) una libreria de HTTP y [cheerio](https://cheerio.js.org/) una variante de jquery para node.
-
-```bash
-yarn add got cheerio
-```
-
-Y creamos la funcion `gaceta.js`
-
-```javascript
-// /functions/gaceta.js
-
-const got = require('got');
-const cheerio = require('cheerio');
-
-exports.handler = async (event, context) => {
-
-    try {
-        
-        const { body } = await got('https://www.gacetaoficial.gob.cu/es');
-        const $ = cheerio.load(body);
-
-        const lastGaceta = {
-            type: $('.views-field-field-tipo-edicion-gaceta .field-content').text(),
-            date: $('.views-field-field-fecha-gaceta .field-content span').attr('content'),
-            number: $('.views-field-field-numero-de-gaceta > .field-content').first().text(),
-            url: $('.views-field-field-fichero-gaceta .field-content a').attr('href'),
-        }
-
-        return {
-            statusCode: 200,
-            headers: { 'Content-Type':'application/json'},            
-            body: JSON.stringify(lastGaceta),   
-        }     
-
-    } catch (e) {
-        return {
-            headers: { 'Content-Type':'application/json'},            
-            statusCode: 500,
-            body: JSON.stringify({ error: "Buumm!!! Error a la vista, prueba mas tarde"}),   
-        }     
-    
-    }
-};
-```
-
-Adicionamos el `.gitignore` para excluir node_modules y siempre me olvida.
-
-```gitignore
-/node_modules/
-```
-
-Actualizamos el repo en github y esperamos que netlify compile, listo ya podemos consultar [/.netlify/functions/gaceta](https://hungry-cray-9233f0.netlify.app/.netlify/functions/gaceta) ✨
-
-Esto solo es para tener una idea de lo que podemos lograr con las funciones de netlify y con el paradigma **serverless**. Ahora solo falta crear cositas. Consulta la [documentación en netlify](https://docs.netlify.com/functions/overview/) y mira [algunos ejemplos](https://functions.netlify.com/examples).
+ 🎉 Y ya debes ver las webmentions en cada uno de los post.
 

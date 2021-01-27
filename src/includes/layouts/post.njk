@@ -39,7 +39,7 @@ permalink: "{% if path %}{{ path | slug }}{% else %}{{'/post/'}}{{ title | slug 
         {% endif %}
     </div>
     <div class="mt-10">
-        <h3 class="mb-6">Webmentions</h3>
+        <h3 class="mb-6" id="webmentions">Webmentions</h3>
         <div data-webmentions="{{ site.url + page.url }}" ></div>
     </div>
 {% endblock %}
