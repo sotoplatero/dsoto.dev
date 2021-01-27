@@ -15,7 +15,7 @@ Hay montones de tutorial y documentación para implementar las webmentions, este
 
 **DM;MD**
 
-### Detectar interacciones en twitter sobre cada post publicado 
+### Detectar interacciones en twitter. 
 
 Lo primero es detectar cuando alquien interactúa con la dirección de tu sitio, si alquien le gusta, comenta o retwitea un tweet que contiene la url a tu post necesitamos recibir una notificación. El problema es que twitter no lo hace así que tenemos que valernos de [Bridgy](https://brid.gy) un servicio de la gente de [indieweb](https://indieweb.org) y que se encarga de hacerle el scrape a twitter, detectar las acciones sobre nuestro sitio y notificarnos.
 
@@ -23,9 +23,9 @@ Para esto solo tienes que ir [Bridgy](https://brid.gy) y registrarte con tu cuen
 
 ![Registro en bridgy](/img/bridgy.jpg)
 
-### Almacenar las menciones
+### Almacenar las menciones.
 
-Ahora nuestro sitio recibirá las interacciones en twitter con nuestro sitio y debemos de hacer algo con ello. Lo más conveniente es utilizar Webmentions.io un servicio igual de Indiweb que las procesa y almacena e incluye un filtro de spam para cualquier mención de un bot.
+Ahora nuestro sitio recibirá las interacciones en twitter con nuestro sitio y debemos hacer algo con ello. Lo más conveniente es utilizar Webmentions.io un servicio igual de Indiweb que las procesa y almacena e incluye un filtro de spam para cualquier mención de un bot. Además te brinda varios endpoint para consultar tus webmentions en formato html, atom y json.
 
 Para que webmentions.io nos indentifique tenemos que incluir en nuestro sitio un link a nuestro perfil en twitter, ten en cuenta incluir `rel="me"`
 
@@ -42,7 +42,7 @@ Luego nos registramos con nuestro sitio en [Webmentions.io](https://webmention.i
 
 Con esto estamos indicando que las menciones que lleguen a nuestro sitio serán recibidas por Webmetion.io
 
-### Mostrar las interacciones en el post
+### Mostrar las interacciones en el post.
 
 Ahora solo nos faltaría mostrar las interacciones en cada post. Para esto podemos consultar la api de webmention.io con el formato `https://webmention.io/api/mentions.jf2?target=httpa://dsoto.dev/posts/incluyendo-webmations-en-el-blog/` y nos devolverá un [json](https://webmention.io/api/mentions.jf2?target=https://dsoto.dev/posts/incluyendo-webmations-en-el-blog/).
 
