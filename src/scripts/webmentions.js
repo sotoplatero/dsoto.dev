@@ -16,7 +16,7 @@ function renderWebmention(webmention) {
   const action = {
     "in-reply-to": "respondió",
     "like-of": "le gustó",
-    "repost-of": " retweeteó",
+    "repost-of": " retwitteó",
     "mention-of": "mencionó"
   }[webmention["wm-property"]];
 
@@ -29,20 +29,20 @@ function renderWebmention(webmention) {
   return  `
     <div class="flex items-center mb-6">
       <div class="flex-shrink-0 mr-4">
-          <img class="h-8 w-8 rounded-full" loading="lazy" src="${webmention.author.photo}">
+          <img class="h-8 w-8 rounded-full" loading="lazy" src="${ webmention.author.photo }">
       </div>
       <div class="">
         <div class="space-x-2">
-          <a class="font-semibold" href="${webmention.author.url}">${webmention.author.name}</a>
+          <a class="font-semibold" href="${ webmention.author.url }">${ webmention.author.name }</a>
           <span class="text-gray-700 dark:text-gray-300">
-            <a class="underline" href="${webmention.url}">${action}</a>
+            <a class="underline" href="${ webmention.url }">${ action }</a>
           </span>
           <span class="text-gray-600 dark:text-gray-400">
-            ${receivedAt}
+            ${ receivedAt }
           </span>
         </div>
         <div class="mt-1">
-            ${webmention.content ? webmention.content.text : ''}
+            ${ webmention.content ? webmention.content.text : '' }
         </div>
       </div>
   </div>`;
