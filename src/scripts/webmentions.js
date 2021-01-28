@@ -15,7 +15,7 @@ function renderWebmention(webmention) {
 
   const action = {
     "in-reply-to": "respondió",
-    "like-of": "le gustó",
+    "like-of": "le gusta",
     "repost-of": " retwitteó",
     "mention-of": "mencionó"
   }[webmention["wm-property"]];
