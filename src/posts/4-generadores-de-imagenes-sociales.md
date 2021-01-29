@@ -14,9 +14,9 @@ Esta lista, es mi lista. Aquí no hay estudio profundo, hice una búsqueda, prob
 
 ![Screenshot Snappa](/img/snappa.jpg)
 
-Este es el "animal", la bestia, el que todo lo puede. Tienes todas las facilidades para los creadores de imagenes, miles de template, potente editor, remueve background, compartir y programar en redes sociales sin salir del propio sistema. Es además muy instuitivo, rápido es todo o casi todo lo que necesitas.
+Este es el "animal", la bestia, el que todo lo puede. Tienes todas las facilidades para los creadores de imágenes, miles de template, potente editor, remueve background, compartir y programar en redes sociales sin salir del propio sistema. Es además muy instuitivo, rápido es todo o casi todo lo que necesitas.
 
-No solo genera meta imágenes sino cualquier tipo de formato de imágenes para las redes sociales: cabeceras, instagram, post, medium, 
+No solo genera meta imágenes sino cualquier tipo de formato de imágenes para las redes sociales: cabeceras, instagram, post, medium.
 
 ### [Bannerbear](https://www.bannerbear.com/)
 
@@ -47,7 +47,7 @@ Una solución sencilla y elegante muy recomenda para blogs, portafolios pero rea
 
 Tiene planes comerciales pero con el plan free puedes generar imágenes ilimitadas. 
 
-### [Usecard](https://usercard.netlify.com)
+### Y una cosa más...[Usecard](https://usercard.netlify.com)
 
 ![Screenshot Usecard](/img/usecard.jpg)
 
