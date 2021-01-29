@@ -55,3 +55,5 @@ Usecard es mi version del asunto. Igualmente la idea es generar la imagen social
 
 Es una solución todavia muy básica  e imcompleta pero funcional y es la que uso en este blog
 
+Ya sabes. No pierdas tiempo creado una imagen bonita en Photoshop o paint 😃 o utilices la primera foto de unspash, hazlo bien que no cuesta. 🎉 
+
