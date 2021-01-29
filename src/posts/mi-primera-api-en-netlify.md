@@ -10,7 +10,7 @@ Netlify permite la ejecución de código de servidor sin tener un servidor dedic
 
 Netlify tiene un plan free suficiente para implementar tus ideas por ejemplo [callemonte.com](https://callemonte.com) esta implementado mediante funciones.
 
-Al final tendremos una función tonta pero funcional que podra ser consultada desde cualquier lugar.
+Al final tendremos una función tonta pero funcional que podrá ser consultada desde cualquier lugar.
 
 **TL;DR**
 
@@ -76,7 +76,7 @@ En la raiz del proyecto incluimos el fichero de configuración de `netlify.toml`
 functions = "functions"
 ```
 
-Con esto le estamos diciendo a netlify que nuestra funciones están en la carpeta `functions`.
+Con esto le estamos diciendo a netlify que nuestras funciones están en la carpeta `functions`.
 
 ### 3. Desplegamos  ###
 
