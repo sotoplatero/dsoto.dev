@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crea tu negocio de hacer páginas web.
+title: Crea tu negocio de páginas web.
 excerpt: Alpine es tan versatil, tan fácil y poderoso que parece el nuevo jQuery reactivo, te ofrece la pontencia de vue, react, angular pero sin complicaciones.
 date: 2021-01-28
 tags: post
@@ -107,4 +107,8 @@ Siga las instrucciones y cuando termine el propio Netlify nos mostrará cuando e
 
 De esta forma cada vez que actualicemos la pagina web solo tenemos que actualizar el repo `git push` y el sitio se actualizará online sin nada más.  
 
-Al final el gasto de desarrollar el sitio se reduce a "0", claro necesitas mucha práctica, muchos deseos pero ya no hay justificación para no tener
+### Conclusiones.
+
+Al final el gasto de desarrollar el sitio se reduce a "0", claro necesitas mucha práctica, muchos deseos pero ya no hay justificación para no vender páginas web. 
+
+Otro punto a tener en cuenta es el precio. Los precios deben ser mucho menores a lo acostumbrado, ya tenemos gasto 0 solo necesitamos que el cliente confie en nosotros, valora un precio justo y establece un precio anual por el servicio de actualización, Update as a Service, UaaS, me cuadra el nombrecito,  existirá?
