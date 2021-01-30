@@ -2,7 +2,7 @@
 layout: post
 title: Crea tu negocio de páginas web.
 excerpt: Alpine es tan versatil, tan fácil y poderoso que parece el nuevo jQuery reactivo, te ofrece la pontencia de vue, react, angular pero sin complicaciones.
-date: 2021-01-28
+date: 2021-01-29
 tags: post
 ---
 
