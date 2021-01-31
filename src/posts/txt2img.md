@@ -40,9 +40,8 @@ Lo sé, una *asco* pero funciona.
 
 ![Imagen para los creativo](https://apimania.netlify.app/api/txt2img?text=Puedes%20ponerte%20creativo&font=Roboto%20Slab&color=%23fff&bg=brown)
 
-💡 Y para los más creativos puedes formatear con algo de markdown. 
+💡 Y para los más creativos puedes formatear con algo de markdown. Puedes usar `**negritas**`, `*italic*` y `_subrayado` 
 
-![Texto con formato](https://apimania.netlify.app/api/txt2img?text=Podemos%20usar%20texto%20en%20**negrita**%20e%20*italic*%20o%20_subrayado_&color=darkmagenta)
+[![Texto con formato](https://apimania.netlify.app/api/txt2img?text=Podemos%20usar%20texto%20en%20**negrita**%20e%20*italic*%20o%20_subrayado_&color=darkmagenta)](https://apimania.netlify.app/api/txt2img?text=Podemos%20usar%20texto%20en%20**negrita**%20e%20*italic*%20o%20_subrayado_&color=darkmagenta)
 
-
-Listo!! 🎉
+Listo!! 🎉 y si se te ocurre algo ✈ más solo pídelo con gusto 😠 te complaceré. 
