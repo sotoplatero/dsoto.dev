@@ -44,4 +44,4 @@ Lo sé, una *asco* pero funciona.
 
 [![Texto con formato](https://apimania.netlify.app/api/txt2img?text=Podemos%20usar%20texto%20en%20**negrita**%20e%20*italic*%20o%20_subrayado_&color=darkmagenta)](https://apimania.netlify.app/api/txt2img?text=Podemos%20usar%20texto%20en%20**negrita**%20e%20*italic*%20o%20_subrayado_&color=darkmagenta)
 
-Listo!! 🎉 y si se te ocurre algo ✈ más solo pídelo con gusto 😠 te complaceré. 
+Listo!! 🎉 y si se te ocurre algo ✈ solo pídelo; con gusto 😠 te complaceré. 
