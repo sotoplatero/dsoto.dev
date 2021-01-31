@@ -1,5 +1,5 @@
-    ---
-permalink: "{% if path %}{{ path | slug }}{% else %}{{'/post/'}}{{ title | slug }}{% endif %}/index.html"
+---
+permalink: "{{'/post/'}}{{ title | slug }}/index.html"
 ---
 
 {% extends 'page.njk' %}
@@ -39,7 +39,9 @@ permalink: "{% if path %}{{ path | slug }}{% else %}{{'/post/'}}{{ title | slug 
         {% endif %}
     </div>
     <div class="mt-10">
-        <h3 class="mb-6" id="webmentions">Webmentions</h3>
-        <div data-webmentions="{{ site.url + page.url }}" ></div>
+        <div data-webmentions="{{ site.url + page.url }}" >
+            <h3 class="mb-6" id="webmentions">Webmentions</h3>
+            
+        </div>
     </div>
 {% endblock %}
