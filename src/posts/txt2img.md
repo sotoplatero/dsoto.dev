@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convierte un texto en imagen
-excerpt: Alpine es tan versatil, tan fácil y poderoso que parece el nuevo jQuery reactivo, te ofrece la pontencia de vue, react, angular pero sin complicaciones.
+excerpt: Un servicio sencillo para para crear imágenes con texto.
 date: 2021-01-30
 tags: post
 ---
