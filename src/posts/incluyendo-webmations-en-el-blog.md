@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Incluyendo las webmetions en mi blog
+title: Incluyendo las webmetions en el blog
 excerpt: Muestra en cada post las reacciones que ha tenido tu blog en Twitter.
 date: 2021-01-27
 tags: post

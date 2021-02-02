@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Un post por día por un mes.
+title: Un post por día por un mes
 excerpt: Esto de escribir el blog se está poniendo difícil. No es solo tener la idea, las ideas son infinitas, el problema es tener un plan, organizarse, escribir....
 date: 2021-01-25
 tags: post
