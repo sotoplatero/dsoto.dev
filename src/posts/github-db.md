@@ -180,7 +180,9 @@ Solo falta crear el input para crear los *todo*. Definimos que al presionar ente
 
 ### Produción
 
-Listo ahora falta crear tu propio repo con el código y publicar el sitio en Netlify.
+Listo ahora falta crear tu propio repo con el código y publicar el sitio en Netlify y agregar las GITHUB_TOKEN en las variables de entorno del sitio.
+
+![Enviroment variables netlify](/img/enviroment-variable-netlify.jpg)
 
 Realmente es algo muy sencillo pero sigo empeñao en mostrar que podemos hacer muchas cosas con pocos elementos y sin complicarnos mucho la existencia. Aplicaciones de este tipo te dan experiencia, resultados rápidos, nuevas ideas. 
 
