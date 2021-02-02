@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mi primera API en Netlify desde 0
+title: Mi primera API en Netlify
 excerpt: Crear una API muy sencilla utilizando las funciones de Netlify.
 date: 2021-01-23
 tags: post
