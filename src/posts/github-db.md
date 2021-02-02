@@ -12,7 +12,7 @@ Esta idea es la utilizada por [Staticman](https://staticman.net/) una solución 
 
 Bueno nosotros vamos pequeño.
 
-*requerimientos*
+**Requerimientos** 
 
 * node, npm o yarn
 * cuenta en github
