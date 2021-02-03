@@ -14,7 +14,7 @@ permalink: "{{'/post/'}}{{ title | slug }}/index.html"
             </p>
         {% endif %}
 
-        <div class="content post my-16">
+        <div class="content post my-10">
             {{ content | safe }}
             <p>
                 Nos vemos en la próxima aventura y si te gusta no seas tacaño y <a href="https://twitter.com/intent/tweet?text={{title}}&url={{ site.url + page.url }}&via=sotoplatero">comparte</a>.
@@ -38,10 +38,9 @@ permalink: "{{'/post/'}}{{ title | slug }}/index.html"
             </p>
         {% endif %}
     </div>
-    <div class="mt-10">
+    <div class="mt-16">
         <div data-webmentions="{{ site.url + page.url }}" >
-            <h3 class="mb-6" id="webmentions">Webmentions</h3>
-            
+            {# <h3 class="mb-6" id="webmentions">Webmentions</h3> #}
         </div>
     </div>
 {% endblock %}

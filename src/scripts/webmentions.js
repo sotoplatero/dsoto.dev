@@ -27,7 +27,7 @@ function renderWebmention(webmention) {
   });
 
   return  `
-    <div class="flex items-center mb-6">
+    <div class="flex items-center mb-6 text-medium">
       <div class="flex-shrink-0 mr-4">
           <img class="h-8 w-8 rounded-full" loading="lazy" src="${ webmention.author.photo }">
       </div>
