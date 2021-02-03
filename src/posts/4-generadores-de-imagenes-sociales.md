@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 4 Generadores de imágenes sociales y una cosa más
+title: 4 Generadores de imágenes sociales
 excerpt: Puedes lograr social image/meta image con tan solo una url.
 date: 2021-01-28
 tags: post
