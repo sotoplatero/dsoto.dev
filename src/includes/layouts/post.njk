@@ -44,9 +44,11 @@ permalink: "{{'/posts/'}}{{ title | slug }}/index.html"
             </p>
         {% endif %}
     </div>
-    <div class="mt-16">
+
+    <div class="mt-20">
         <div data-webmentions="{{ site.url + page.url }}" >
             {# <h3 class="mb-6" id="webmentions">Webmentions</h3> #}
         </div>
     </div>
+    
 {% endblock %}

@@ -12,7 +12,7 @@ Independiente del debate sobre si clases vs utility [CSS Utility Classes and "Se
 
 ### [1 - Diseño responsivo en clases](https://tailwindcss.com/docs/responsive-design)
 
-El diseño responsivo con Tailwind es una gozadera. Primero tiene definidos 5 *breakpoint* acorde a los diferentes dispositivos:
+El diseño responsivo con Tailwind es una gozadera. Primero tienes definidos 5 *breakpoint* acorde a los diferentes dispositivos:
 
 * `sm` &rarr; 640px
 * `md` &rarr; 768px
@@ -20,7 +20,9 @@ El diseño responsivo con Tailwind es una gozadera. Primero tiene definidos 5 *b
 * `xl` &rarr; 1280px
 * `2xl` &rarr; 1536px
 
-Para que una estilo se aplique en ciertos dispositivos solo tienes que usar el `breakpoint` como prefijo a la clase en cuestión. teniendo en cuenta el diseño responsivo es `mobile-first` si quiero que un texto incremente de tamaño en la medida que crece la pantalla tendria que definir `class="text-sm md:text-normal lg:text-lg"`. Se puede aplicar a todas las clases de tailwind y no tienes que definir para cada breakpoint solo donde lo necesites.
+Para que una estilo se aplique en ciertos dispositivos solo tienes que usar el `breakpoint` como prefijo a la clase en cuestión. El diseño es `mobile-first` y si quiero que un texto incremente de tamaño en cada tamaño de pantalla tendria que definir `class="text-sm md:text-normal lg:text-lg"`. 
+
+Se puede aplicar a todas las clases de tailwind y no tienes que definir una clase para cada breakpoint, solo donde lo necesites.
 
 ```html 
 <img class="w-16 md:w-32 lg:w-48 lg:bg-green-200 md:text-gray-900" src="...">
