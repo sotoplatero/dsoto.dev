@@ -14,7 +14,7 @@ El virtual DOM es solamente una vía para lograr reactividad, de forma muy muy c
 
 **La maravilla de Svelte**
 
-Además de enredarse con el virtual DOM para hacer lo evidente:
+Además de no enredarse con el virtual DOM para hacer lo evidente:
 
 - Svelte no es un framework, es un compilador y lo que escribas durante el desarrollo Svelte lo convierte a vanilla js después del build. Entonces no tendrás nada de svelte en producción, más rápido y ligero que eso no vas a lograrlo con framework alguno. Aunque en velocidad [están compitiendo](https://svelte.dev/blog/frameworks-without-the-framework#Introducing_Svelte) con [Inferno](https://infernojs.org/)...por el momento.
 
