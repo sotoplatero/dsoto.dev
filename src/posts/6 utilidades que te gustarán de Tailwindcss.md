@@ -6,27 +6,28 @@ date: 2021-02-02
 tags: post
 ---
 
-Tailwindcss es un framework CSS bajo el concepto de *utility-first* y ofrece las herramientas para que construyas tu propios componentes css. Por supuesto los mismos autores tienen [Tailwindui](https://tailwindui.com) un paquete con más de 300 componentes de pago.
+Tailwindcss es un framework CSS bajo el concepto de _utility-first_ y ofrece las herramientas para que construyas tu propios componentes css. Por supuesto los mismos autores tienen [Tailwindui](https://tailwindui.com) un paquete con más de 300 componentes de pago.
 
 Independiente del debate sobre si clases vs utility [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/) Tailwindcss ya es un hecho, viene con fuerza y sin parar. Puedes ignorarlo y sequir con Bootstrap o echarle un vistazo y tener una nueva herramienta css alternativa, realmente no son excluyentes.
 
 ### [1 - Diseño responsivo en clases](https://tailwindcss.com/docs/responsive-design)
 
-El diseño responsivo con Tailwind es una gozadera. Primero tienes definidos 5 *breakpoint* acorde a los diferentes dispositivos:
+El diseño responsivo con Tailwind es una gozadera. Primero tienes definidos 5 _breakpoint_ acorde a los diferentes dispositivos:
 
-* `sm` &rarr; 640px
-* `md` &rarr; 768px
-* `lg` &rarr; 1024px
-* `xl` &rarr; 1280px
-* `2xl` &rarr; 1536px
+- `sm` &rarr; 640px
+- `md` &rarr; 768px
+- `lg` &rarr; 1024px
+- `xl` &rarr; 1280px
+- `2xl` &rarr; 1536px
 
-Para que una estilo se aplique en ciertos dispositivos solo tienes que usar el `breakpoint` como prefijo a la clase en cuestión. El diseño es `mobile-first` y si quiero que un texto incremente de tamaño en cada tamaño de pantalla tendria que definir `class="text-sm md:text-normal lg:text-lg"`. 
+Para que una estilo se aplique en ciertos dispositivos solo tienes que usar el `breakpoint` como prefijo a la clase en cuestión. El diseño es `mobile-first` y si quiero que un texto incremente de tamaño en cada tamaño de pantalla tendria que definir `class="text-sm md:text-normal lg:text-lg"`.
 
 Se puede aplicar a todas las clases de tailwind y no tienes que definir una clase para cada breakpoint, solo donde lo necesites.
 
-```html 
-<img class="w-16 md:w-32 lg:w-48 lg:bg-green-200 md:text-gray-900" src="...">
+```html
+<img class="w-16 md:w-32 lg:w-48 lg:bg-green-200 md:text-gray-900" src="..." />
 ```
+
 Para verlo en funcionamiento puedes modificar el tamaño del browser y ver los cambios del siguiente `card`.
 
 <div class="overflow-hidden px-6 py-8">
@@ -46,7 +47,7 @@ Para verlo en funcionamiento puedes modificar el tamaño del browser y ver los c
 
 ### [2 - Gradientes](https://tailwindcss.com/docs/gradient-color-stops)
 
-Ahora que es moda usar gradientes en cualquie parte es muy fácil con Tailwind solo debes agregar la clase el tipo de gradiente `bg-gradient-to-t` y definir los color de inicio `from-`, medio `via-` y final `to-`
+Ahora que es moda usar gradientes en cualquier parte es muy fácil con Tailwind solo debes agregar la clase el tipo de gradiente `bg-gradient-to-t` y definir los color de inicio `from-`, medio `via-` y final `to-`
 
 <div class="flex justify-around py-8">
 	<button class="
@@ -62,8 +63,8 @@ Ahora que es moda usar gradientes en cualquie parte es muy fácil con Tailwind s
 </div>
 
 ```html
-<button 
-	class="
+<button
+  class="
 		px-8 py-3
 		radius-lg
 		bg-gradient-to-r 
@@ -72,13 +73,13 @@ Ahora que es moda usar gradientes en cualquie parte es muy fácil con Tailwind s
 		to-red-500
 	"
 >
-	Botón con grandientes
+  Botón con grandientes
 </button>
 ```
 
 #### Con pseudo-clase
 
-Puedes usar los gradientes con una pseudo-clase como *hover* o *focus* solo antecediendo la clase de los gradientes con el prefijo `hover:` o `focus:`.
+Puedes usar los gradientes con una pseudo-clase como _hover_ o _focus_ solo antecediendo la clase de los gradientes con el prefijo `hover:` o `focus:`.
 
 <div class="flex justify-around py-8">
 	<button 
@@ -98,11 +99,11 @@ Puedes usar los gradientes con una pseudo-clase como *hover* o *focus* solo ante
 	>
 		Botón con grandientes en el hover
 	</button>
-</div> 
+</div>
 
 ```html
-<button 
-	class="
+<button
+  class="
 		px-8 py-2
 		bg-gradient-to-r 
 		from-purple-400 
@@ -111,13 +112,13 @@ Puedes usar los gradientes con una pseudo-clase como *hover* o *focus* solo ante
 		hover:to-indigo-500
 	"
 >
-	Botón con grandientes
+  Botón con grandientes
 </button>
 ```
 
 #### Texto con gradientes
 
-El texto con gradientes se basa en truco. Se aplica el gradiente al fondo del texto y luego se aplica un clip `bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500`
+El texto con gradientes se basa en un truco. Se define el gradiente al fondo del texto y luego se aplica un clip `bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500`
 
 <div class="flex justify-around py-8">
   <div class="text-center text-5xl font-extrabold leading-none tracking-tight">
@@ -130,7 +131,9 @@ El texto con gradientes se basa en truco. Se aplica el gradiente al fondo del te
 ```html
 <div class="flex justify-around py-8">
   <div class="text-center text-5xl font-extrabold leading-none tracking-tight">
-    <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+    <span
+      class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500"
+    >
       Hello world
     </span>
   </div>
@@ -139,9 +142,9 @@ El texto con gradientes se basa en truco. Se aplica el gradiente al fondo del te
 
 ### [3- Transiciones](https://tailwindcss.com/docs/animation)
 
-Podemos manipular las trasiciones CSS mucho más cómoda, si anteriormente no te atrevias a meterte con las trasiciones CSS, ahora es casi un juego. Llegas a entender que cada cambio de estilo debe llevar una trasición y dominar las transiciones hará que tu sitio web luza mucho más profesional. 
+Podemos manipular las trasiciones CSS mucho más cómoda, si anteriormente no te atrevias a meterte con ellas, ahora es casi un juego. Llegas a entender que cada cambio de estilo debe llevar una trasición y dominar las transiciones hará que tu sitio web luza mucho más profesional.
 
-Puedes manipular la duración de la trasición `duration-100`, `duration-150`, ..., `duration-1000`, la función `ease-linear`,`ease-in`, `ease-out`, `ease-in-out` y el retraso 
+Puedes manipular la duración de la trasición `duration-100`, `duration-150`, ..., `duration-1000`, la función `ease-linear`,`ease-in`, `ease-out`, `ease-in-out` y el retraso
 
 <div class="flex justify-around py-8">
 <button class="transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-blue-600 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-md">
@@ -155,8 +158,9 @@ Puedes manipular la duración de la trasición `duration-100`, `duration-150`, .
 </button>
 </div>
 
-```html 
-<button class="
+```html
+<button
+  class="
 	transition 
 	duration-500 
 	ease-in-out 
@@ -169,14 +173,15 @@ Puedes manipular la duración de la trasición `duration-100`, `duration-150`, .
 	font-semibold 
 	py-3 px-6 
 	rounded-md
-">
+"
+>
   Botón con transición
 </button>
 ```
 
 ### [4- Animaciones](https://tailwindcss.com/docs/animation)
 
-Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `animate-pulse` y `animate-bounce` 
+Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `animate-pulse` y `animate-bounce`
 
 **Spin**
 
@@ -195,7 +200,7 @@ Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `anima
   <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
     <!-- ... -->
   </svg>
-  Actualizando Datos 
+  Actualizando Datos
 </button>
 ```
 
@@ -213,7 +218,7 @@ Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `anima
     </span>
   </div>
 
-*Bounce*
+_Bounce_
 
 <div class="flex justify-around py-8">
 <svg class="animate-bounce w-6 h-6 text-orange-900" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -221,7 +226,7 @@ Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `anima
 </svg>
 </div>
 
-*Pulse*
+_Pulse_
 
 <div class="flex justify-around py-8">
 <div class="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
@@ -240,7 +245,7 @@ Tailwindcss ofrece 4 tipos de animaciones `animate-spin`, `animate-ping`, `anima
 
 ### [5- Transformaciones](https://tailwindcss.com/docs/transform)
 
-Ofrece cuatro tipos de tranformaciones: *scale*, *rotate*, *translate* y *skew* que las puedes aplicar sobre los componentes, lo habitual es conjugarlos con pseudo-clases o eventos como puede ser el `hover:`. 
+Ofrece cuatro tipos de tranformaciones: _scale_, _rotate_, _translate_ y _skew_ que las puedes aplicar sobre los componentes, lo habitual es conjugarlos con pseudo-clases o eventos como puede ser el `hover:`.
 
 En este ejemplo se muestran tres de las tranformaciones sobre el hover de un botón. Realmente es muy divertido y las posibilidades son multiples.
 
@@ -250,9 +255,9 @@ En este ejemplo se muestran tres de las tranformaciones sobre el hover de un bot
 	</div>
 </div>
 
-```html 
-<button 
-	class="
+```html
+<button
+  class="
 		transition 
 		duration-500 
 		ease-in-out 
@@ -270,7 +275,7 @@ En este ejemplo se muestran tres de las tranformaciones sobre el hover de un bot
 		rounded-md
 	"
 >
-	Botón Transformer
+  Botón Transformer
 </button>
 ```
 
@@ -284,21 +289,19 @@ También puedes controlar el [origen de la tranformación](https://tailwindcss.c
 
 ### [6- Modo Oscuro](https://tailwindcss.com/docs/dark-mode)
 
-Pronto tener una version de estilo en modo oscuro será un obligación, así que definir estos estilo de modo fácil y rápido es muy importante.
+Pronto tener una version de estilo en modo oscuro será un obligación, así que definir estos estilos de modo fácil y rápido es muy importante.
 
 Tailwind hace esto de forma muy natural, incluye una variante `dark:` que se usa para definir los estilos cuando está activo el modo oscuro. Todas las clases de pueden definirse en modo oscuro.
 
-```html 
+```html
 <div class="bg-white dark:bg-gray-800">
   <h1 class="text-gray-900 dark:text-white">Dark mode is here!</h1>
-  <p class="text-gray-600 dark:text-gray-300">
-    Lorem ipsum...
-  </p>
+  <p class="text-gray-600 dark:text-gray-300">Lorem ipsum...</p>
 </div>
 ```
 
 ### Conclusiones
 
-Esto es solo un vistazo a Tailwindcss, yo espero que habrán grandes cambios en la forma de ver el css y sus framworks. Si te interesó un poquito pues coge impulso revisa la [ayuda](https://tailwindcss.com/docs) que esta buenísima, pruebalo en tu próximo proyecto. Tailwindcss ya tiene tutoriales para la [instalación](https://tailwindcss.com/docs/installation) con los framework más representativos: next, nuxt, react, gatsby, laravel. 
+Esto es solo un vistazo a Tailwindcss, yo espero que habrán grandes cambios en la forma de ver el css y sus framworks. Si te interesó un poquito pues coge impulso revisa la [ayuda](https://tailwindcss.com/docs) que esta buenísima, pruebalo en tu próximo proyecto. Tailwindcss ya tiene tutoriales para la [instalación](https://tailwindcss.com/docs/installation) con los framework más representativos: next, nuxt, react, gatsby, laravel.
 
 Si quieres probar y jugar un ratos con Tailwindcss puedes utilizar su [Playground](https://play.tailwindcss.com/). Hay uchos recursos y cada día salen nuevas ideas, proyectos.
