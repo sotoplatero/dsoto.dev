@@ -302,6 +302,6 @@ Tailwind hace esto de forma muy natural, incluye una variante `dark:` que se usa
 
 ### Conclusiones
 
-Esto es solo un vistazo a Tailwindcss, yo espero que habrán grandes cambios en la forma de ver el css y sus framworks. Si te interesó un poquito pues coge impulso revisa la [ayuda](https://tailwindcss.com/docs) que esta buenísima, pruebalo en tu próximo proyecto. Tailwindcss ya tiene tutoriales para la [instalación](https://tailwindcss.com/docs/installation) con los framework más representativos: next, nuxt, react, gatsby, laravel.
+Esto es solo un vistazo a TailwindCSS, yo espero que habrán grandes cambios en la forma de ver el css y sus framworks. Si te interesó un poquito pues coge impulso revisa la [ayuda](https://tailwindcss.com/docs) que esta buenísima, pruebalo en tu próximo proyecto. Tailwindcss ya tiene tutoriales para la [instalación](https://tailwindcss.com/docs/installation) con los framework más representativos: next, nuxt, react, gatsby, laravel.
 
-Si quieres probar y jugar un ratos con Tailwindcss puedes utilizar su [Playground](https://play.tailwindcss.com/). Hay uchos recursos y cada día salen nuevas ideas, proyectos.
+Si quieres probar y jugar un ratos con Tailwindcss puedes utilizar su [Playground](https://play.tailwindcss.com/). Hay muchos recursos y cada día salen nuevas ideas y proyectos.
