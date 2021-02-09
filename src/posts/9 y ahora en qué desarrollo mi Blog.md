@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Como seleccioné el generador de mi Blog.
+title: ¿Y ahora en qué desarrollo mi Blog?
 excerpt: El tortuoso proceso mental de elegir con que desarrollar tu blog.
 date: 2021-02-05
 tags: post
 ---
 
-Aquí no se habla de wordpress. 
+Aquí no se habla de wordpress.
 
 Cuando decidí publicar este blog me enfrenté a un dificil desición. ¿Que framework utilizar? En el sitio [Jamstack](https://jamstack.org/generators/) existen 322 opciones!!!, llené mi laptop de proyectos "blogs" todos con diferentes plataformas, buscaba temas, leía, lo dejaba, luego volvía a probar, una locura.
 
@@ -18,15 +18,15 @@ Todavía lo tenía complicado porque hay otro gran grupo de generadores basados 
 
 Para facilitarme el trabajo me limité a los que tengan multiples templates y entonces tenía a Hexo, Eleventy, [Metalsmith](http://www.metalsmith.io/). Y como me gusta darle oportunidad a los que empiezan seleccioné Eleventy, muy bueno, sencillo y versátil. Luego me gustaría hablar de como me ha ido con él. Un nota a favor de Metalsmith que tiene un concepto muy interesante y me gustaria probar.
 
->Hugo es una gran propuesta, muy rápido y sencillo, si no te eres tan "indeciso" como yo debería ser tu elección.
+> Hugo es una gran propuesta, muy rápido y sencillo, si no te eres tan "indeciso" como yo debería ser tu elección.
 
-### Eleventy 
+### Eleventy
 
 Fue creado como alternativa JavaScript a Jekyll, es cero-configuración por defecto pero es muy versatil en su configuración.
 
-* Es independiente del motor de template.Taabaja con HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug.
-* Estructura de ficheros flexible. 
-* No es un framwork JavaScript. No fuerza a que incluyas ninguna libreria en el contenido del sitio. 
+- Es independiente del motor de template.Taabaja con HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug.
+- Estructura de ficheros flexible.
+- No es un framwork JavaScript. No fuerza a que incluyas ninguna libreria en el contenido del sitio.
 
 Si te interesa puedes leer en el el [sitio de Eleventy](https://www.11ty.dev/docs/) o en el [blog de su creador](https://www.zachleat.com/web/introducing-eleventy/)
 
