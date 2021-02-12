@@ -52,7 +52,7 @@ En ocasiones cuando escribes sobre otros sitios deseas incluir sus logos y he vi
 
 Para incluir logos de terceros en tu sitio puedes usar [unavatar](https://unavatar.now.sh) un servicio free y muy bien hecho.
 
-[Logo dsoto.dev](https://unavatar.now.sh/dsoto.dev)
+<a href="https://unavatar.now.sh/dsoto.dev" target="_blank" class="font-bold">Logo dsoto.dev</a>
 
 ```html
 <img src="https://unavatar.now.sh/dsoto.dev" alt="Logo de dsoto.dev" />
@@ -60,7 +60,7 @@ Para incluir logos de terceros en tu sitio puedes usar [unavatar](https://unavat
 
 También puedes utilizar el servicio de logos de [Clearbit](https://clearbit.com/docs#logo-api)
 
-[Logo dev.to](https://logo.clearbit.com/dev.to)
+<a href="https://logo.clearbit.com/dev.to" target="_blank" class="font-bold">Logo dev.to</a>
 
 ```html
 <img src="https://logo.clearbit.com/dev.to" alt="Logo de dev.to" />
