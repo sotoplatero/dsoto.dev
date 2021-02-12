@@ -16,8 +16,11 @@
             </div>
         {% endif %}
     {% endfor %}
-    {% if (post.length > 1) %}
-        <a href="/posts">Todos los escritos</a>    
+    
+    {% if (posts.length > 1) %}
+        <div class="mt-8">
+            <a href="/posts">Todos &rarr;</a>    
+        </div>
     {% endif %}
     
 </div>
