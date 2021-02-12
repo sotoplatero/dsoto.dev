@@ -3,13 +3,12 @@ layout: post
 title: 10 Tips para lanzar tu BLOG como un DEV
 excerpt:
 date: 2021-02-07
-draft: true
 tags: post
 ---
 
-Escribir para tu blog es realmente complicado y si eres desarrollador y quieres incluir código se te complica más. Además de tener la idea, investigar, documentarte y redactar tienes que escribir el código, probarlo, publicarlo. Y todo este tiempo es luchando con tus pensamientos que te dicen que es una pérdida de tiempo y nadie te va leer.
+Escribir un blog es realmente complicado y si eres desarrollador se te complica más. Además de tener la idea, investigar, documentarte y redactar tienes que escribir el código, probarlo, publicarlo. Y todo este tiempo es luchando con tus pensamientos que te dicen que es una pérdida de tiempo y nadie te va leer.
 
-Entonces lo mejor es armarte de la mayor cantidad de herramientas y consejos o tips que te ayuden a comenzar sin perder el impulso, "perder" menos tiempo y aumentar tu público.
+Si logras superar tus demonios entonces lo mejor es armarte de la mayor cantidad de herramientas y consejos o tips que te ayuden a comenzar sin perder el impulso, "perder" menos tiempo y aumentar tu público.
 
 ### 1. Utiliza un generador estático
 
@@ -25,17 +24,18 @@ Lo más probable es que desees incluir comentarios; te permiten retroalimentarte
 
 ### 4. Muestra los Webmetions
 
-Al igual que los comentarios los [Webmetions] van a mostrar como se comporta tu blog en las redes sociales. Puedes guiarte con un [post anterior](/posts/) donde explico como incluirlos en tu blog. 
+Al igual que los comentarios los Webmetions van a mostrar como se comporta tu blog en las redes sociales. Puedes guiarte con un [post anterior](/posts/) donde explico como incluirlos en tu blog. 
 
 ### 5. Utiliza un Auto Generador de Meta Images 
 
-La mayoría de los blogs que he visto incluyen imágenes locales en sus meta tag. Sinceramente esto estaría bien si tu trabajo es el blog y tienes tiempo o alguien dedicado a crear/buscar  una imagen que se ajuste a cada uno de tus post y tenga sentido. Poner una imagen que se vea bonita no puede ser el sentido.
+La mayoría de los blogs incluyen imágenes locales en sus meta tag. Crear una imagen para cada uno de tus post lleva tiempo, normalmente debes utilizar un herramienta como puede ser [Snappa](https://snappa.com/), [Bannerbears](https://www.bannerbear.com/) y por supuesto el [canva](https://www.canva.com/) pero incluyo con ellas debes dedicar un tiempo.
 
-Incluso poner cualquier imagen te va llevar tiempo buscarla, comprobar que tenga las dimensiones necesarias, editar los meta tag, todo esto es tiempo. La solución es muy sencilla, incluye algún [generado de imagenes sociales](/posts/4-generadores-de-imagenes-sociales/).
+La otra opción es buscar una imagen en repositorios públicos pero igualmente lleva tiempo encontrar la correcta, ajustar sus dimensiones y editar los meta tag, todo es tiempo. La solución es muy sencilla, incluye algún [generados de imagenes sociales](/posts/4-generadores-de-imagenes-sociales/).
 
 ```html
-<meta name="twitter:image:src" content="https://usecard.netlify.app/card?url=https://dsoto.dev/&theme=yingyang">
-<meta name="og:image" content="https://usecard.netlify.app/card?url=https://dsoto.dev">
+<meta name="twitter:image:src" content="https://usecard.dsoto.dev/card?url=https://dsoto.dev/posts/10-tips-para-lanzar-tu-blog-como-un-dev/&theme=yingyang">
+
+<meta name="og:image" content="https://usecard.dsoto.dev/card?url=https://dsoto.dev/posts/10-tips-para-lanzar-tu-blog-como-un-dev/&theme=yingyang">
 ```
 
 ### 6. Logos
@@ -84,7 +84,7 @@ Cada vez que terminas de escribir un post y publicarlo debes socializarlo, es la
 
 ### 10. Enlaces para compartir
 
-Siempre incluye al final o algún lugar visible la posibilidad que quien te lee pueda compartir el artículo si le ha gustado, es muy cómodo y muy facil de implementar. Puedes usar un servicio como [shatethis](https://sharethis.com) o si eres solomante twitter simplemente incluye el link directamente.
+Siempre incluye al final o algún lugar visible la posibilidad que quien te lee pueda compartir el artículo si le ha gustado, es muy cómodo y muy facil de implementar. Puedes usar un servicio como [shatethis](https://sharethis.com) o si eres twittero simplemente incluye el link directamente del _intent_.
 
 ```html
 <a href="https://twitter.com/intent/tweet?text=&url=&via=sotoplatero">Compartir en Twitter</a>
