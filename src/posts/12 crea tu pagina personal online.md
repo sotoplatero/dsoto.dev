@@ -10,7 +10,7 @@ Te lo voy a poner facilito, en solo tres pasos puedes tener tu propia página we
 
 ### 1. Descarga un Template
 
-Descargate [este template](https://templateflip.com/templates/right-resume/) de un curriculum y descompactalo en una carpeta vacía. Puedes utiilzar otro que te guste o crearte tu propio HTML.
+Busca [un template](https://templateflip.com/templates/right-resume/) que te guste, descargalo  y descompactalo en una carpeta vacía. Puedes uscar [otro template](https://onepagelove.com/templates/free-templates) que te guste o create tu propio HTML.
 
 ### 2. Edita, ponte bonito
 
@@ -28,6 +28,6 @@ Si todo va bien ya tienes tu página online solo que tendrá un nombre aleatorio
 
 ![Crear nuevo sitio en Netlify](/img/change_name_site_netlify.jpg)
 
-🚀 Listo!! ya puedes visitar tu [flamante curriculum](https://cuco-perez.netlifly.app), cuando necesites actualizar tu curriculum solo tienes que editar nuevamente el `index.html` y actualiza el repo y nada más. Netlify recibe la notificación desde el Github mediante webhook de que el repo ha cambiado y actualiza el sitio.
+🚀 Listo!! ya puedes visitar tu [flamante curriculum](https://cuco-perez.netlifly.app), cuando necesites actualizarlo solo tienes que editar nuevamente el `index.html` y actualizar el repo, nada más. Netlify recibe la notificación desde el Github mediante webhook de que el repo ha cambiado y actualiza el sitio automaticamente.
 
-Si te pareció útil [sígueme](https://twitter.com/sotoplatero) y mantente al tanto que en el próximo post te voy a decir como recibir mensajes desde tu nueva página.
+Si te pareció útil [sígueme](https://twitter.com/sotoplatero) y mantente al tanto que en el próximo post te voy a decir como recibir mensajes de contacto desde tu página.
