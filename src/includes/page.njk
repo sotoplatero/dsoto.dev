@@ -40,7 +40,9 @@
     <link rel="stylesheet" href="{{ site.baseUrl }}assets/main.bundle.css">
 
     {% block head %}{% endblock %}
-    <script async defer data-website-id="03c5bdf9-c9e9-429d-a2c7-a0bf0ad86e19" src="https://umami.dsoto.dev/umami.js"></script>        
+    <script async data-website-id="03c5bdf9-c9e9-429d-a2c7-a0bf0ad86e19" src="https://umami.dsoto.dev/umami.js"></script>        
+    <script defer src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script defer src="{{ site.baseUrl }}assets/main.bundle.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
     {# {% include 'top-notice.njk' %} #}
@@ -50,7 +52,5 @@
     </main>
     {% include 'footer.njk' %}
     {# {% include 'privacy-notice.njk' %} #}
-    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
-    <script src="{{ site.baseUrl }}assets/main.bundle.js"></script>
   </body>
 </html>
