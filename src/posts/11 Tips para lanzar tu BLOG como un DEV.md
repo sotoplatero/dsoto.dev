@@ -12,11 +12,11 @@ Si logras superar tus demonios entonces lo mejor es armarte de la mayor cantidad
 
 ### 1. Utiliza un generador estático
 
-No utilices ningún framework con base de datos utiliza un generador de sitios estáticos y selecciona alguno en [Jamstack](). Mi consejo es uses un [generador basado en template y nada de javascript, nada de react, preact, vue](/post/), simplemente uno que convierta de md a html. Mantente sencillo.
+No utilices ningún framework con base de datos utiliza un generador de sitios estáticos y selecciona alguno en [Jamstack](https://jamstack.org). Mi consejo es uses un [generador basado en template y nada de javascript, nada de react, preact, vue](/posts/y-ahora-en-que-desarrollo-mi-blog/), simplemente uno que convierta de md a html. Mantente sencillo.
 
 ### 2. Hosting estático
 
-Como tienes un sitio estático puedes utilizar alguno de los servicios de hosting serverless estático, todos tienen planes free super generosos y están orientados a hacerte _"feliz"_ recomiendo [Netlify]() pero también tienes a [Vercel](), [Begin](), [Surge]() y por supuesto [Github Pages](https://pages.github.com/)
+Como tienes un sitio estático puedes utilizar alguno de los servicios de hosting serverless estático, todos tienen planes free super generosos y están orientados a hacerte _"feliz"_ recomiendo [Netlify](https://netlify.com) pero también tienes a [Vercel](https://vercel.com), [Begin](https://begin.com), [Surge](https://surge.sh) y por supuesto [Github Pages](https://pages.github.com/)
 
 ### 3. Incluye comentarios
 
@@ -24,7 +24,7 @@ Lo más probable es que desees incluir comentarios; te permiten retroalimentarte
 
 ### 4. Muestra los Webmetions
 
-Al igual que los comentarios los Webmetions van a mostrar como se comporta tu blog en las redes sociales. Puedes guiarte con un [post anterior](/posts/) donde explico como incluirlos en tu blog. 
+Al igual que los comentarios los Webmetions van a mostrar como se comporta tu blog en las redes sociales. Puedes guiarte con un [post anterior](/posts/incluyendo-las-webmetions-en-el-blog/) donde explico como incluirlos en tu blog. 
 
 ### 5. Utiliza un Auto Generador de Meta Images 
 
