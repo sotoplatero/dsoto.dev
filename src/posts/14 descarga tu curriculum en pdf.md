@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Descarga tu curriculum en PDF desde tu propia página WEB
+title: Descarga el PDF de tu curriculum online
 excerpt: Agregar el envío de formularios de contacto desde una página html y con seguridad de honeypots
 date: 2021-02-10
 tags: post
