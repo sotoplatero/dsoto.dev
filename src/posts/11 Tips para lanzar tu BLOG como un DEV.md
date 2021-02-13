@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 10 Tips para lanzar tu BLOG como un DEV
-excerpt:
+excerpt: Consejos que te ayudarán a crear y mantener un blog para programadores
 date: 2021-02-07
 tags: post
 ---
