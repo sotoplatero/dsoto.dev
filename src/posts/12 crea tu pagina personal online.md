@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crea tu página web online en tres pasos.
+title: Publica tu página web en tres pasos.
 excerpt: Selector de colores de la paleta de Taildwind con Alpinejs
 date: 2021-02-08
 tags: post
