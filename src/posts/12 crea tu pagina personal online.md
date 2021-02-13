@@ -6,7 +6,7 @@ date: 2021-02-08
 tags: post
 ---
 
-Te lo voy a poner facilito, en solo tres pasos puedes tener tu propia página web, rápido, fácil y gratis.
+Te lo voy a poner facilito, en solo tres pasos puedes tener tu propia página web, rápido, fácil y gratis y puedes ampliarlo a cualquier página. SOlo necesitas saber un poco de HTML, tener una cuenta en Github y en Netlify. 
 
 ### 1. Descarga un Template
 
@@ -28,6 +28,6 @@ Si todo va bien ya tienes tu página online solo que tendrá un nombre aleatorio
 
 ![Crear nuevo sitio en Netlify](/img/change_name_site_netlify.jpg)
 
-Listo ya puedes visitar tu [flamante curriculum](https://cuco-perez.netlifly.app). Luego cuando necesites cambiar algo solo edita el `index.html` y actualiza el repo.
+🚀 Listo!! ya puedes visitar tu [flamante curriculum](https://cuco-perez.netlifly.app), cuando necesites actualizar tu curriculum solo tienes que editar nuevamente el `index.html` y actualiza el repo y nada más. Netlify recibe la notificación desde el Github mediante webhook de que el repo ha cambiado y actualiza el sitio.
 
 Si te pareció útil [sígueme](https://twitter.com/sotoplatero) y mantente al tanto que en el próximo post te voy a decir como recibir mensajes desde tu nueva página.
