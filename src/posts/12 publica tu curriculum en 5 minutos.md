@@ -17,16 +17,6 @@ Descarga [**este template**](https://templateflip.com/templates/right-resume/), 
 
 Crea un [nuevo repositiorio en Github](https://docs.github.com/es/github/getting-started-with-github/create-a-repo) y agregalo a la carpeta donde está el template descargado.
 
-```bash
-echo "# nuevo" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/sotoplatero/nuevo.git
-git push -u origin main
-```
-
 ### 3. Publica
 
 En tu cuenta en netlify agrega un nuevo sitio
