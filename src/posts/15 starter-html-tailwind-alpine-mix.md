@@ -8,27 +8,27 @@ tags: post
 
 Quiero presentarte un _starter_ muy sencillo pero potente que te permitirá comenzar a jugar con tailwind y [alpine](). Alpine es el complemento js perfecto para tailwindcss además que te prodrás crear aplicaciones reactivas increíbles de forma muy rápida sin tanto virtual dom, build y el copón divino.
 
-Lo primero es que no soy experto, ni maestro ni guru; esto es solo mi experiencia, mis gustos, mis errores y puede ser que te ayuden a dar pasos mas rápido y más largos.
+Lo primero es que no soy experto, ni maestro ni guru; esto es solo mi experiencia, mis gustos, mis errores y solo pretendo ayudarte a dar pasos mas rápido y más largos 🚀, esto es cosa de viejos.
 
 ¿Por qué Tailwind? Adam Wathan el creador de Tailwind CSS tiene más razones [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/) para mi gusto:
 
 * Es completamente responsivo. Todos los cambios de estilo para los diferentes dispositivos se realizan directamente en el class del elemento.
-* No es necesario tocar el css todo se resuelve mediante las utility class
-* Solución elegante para transiciones y animaciones
-* Lo que le falte se resuelve con plugins
-* Igualmente puedes crearte tus propias clases para componentes como conoces el Bootstrap y compañia.
-* Diseñado para utilizarse con [PurgeCss](https://purgecss.com/), las clases que no utilices se eliminan en producción con eso garantizas que tu ficheros de estilos son minúsculos de verdad.
+* No es necesario tocar el css todo se resuelve mediante las utility class sin salir del HTML.
+* Solución elegante para transiciones, animaciones y un poco mas.
+* Lo que le falte se resuelve con plugins.
+* Igualmente puedes crearte tus propias clases para componentes como conoces en el Bootstrap y compañia.
+* Diseñado para utilizarse con [PurgeCss](https://purgecss.com/), las clases que no utilices se eliminan en producción con eso garantizas que tus ficheros de estilos sean minúsculos de verdad.
 
 >Sobre Tailwind escribí ya escribí un post: [6 Super-utlidades de Tailwindcss que amarás](/posts/6-super-utlidades-de-tailwindcss-que-amaras/) que puedes consultar. 
 
 >Puedes visitar [Alpine el nuevo jQuery reactivo](/posts/alpine-example/) donde implemento un buscador de cocteles utilizando una api remota.
 
-Normalmente me demoro buscando y probando soluciones que me permitan luego agilizar el desarrollo. Así  estuve dos noches enredao con varias opciones para tener un starter html/tailwind que me gustara; puedes explorar tú mismo en [How to setup Tailwind with PurgeCSS and PostCSS](https://flaviocopes.com/tailwind-setup/) y [Tailwind CSS Laravel Mix Starter Project](https://github.com/parfaitementweb/tailwind-mix-starter). En está última me gustó la idea de utilizar [Laravel Mix](https://laravel-mix.com/) pero tiene problemas con las versiones asi que me aventuré a hacer mi propio starter [HTML Tailwind Alpine Mix](https://github.com/dsoto-blog/html-tailwind-alpine-mix), cosa que no me gusta porque realmente soy una fan del copia y pega.
+Normalmente me demoro buscando y probando soluciones que me permitan luego agilizar el desarrollo. Así  estuve dos noches enredao con varias opciones para tener un starter html/tailwind que me gustara; puedes explorar tú mismo en [How to setup Tailwind with PurgeCSS and PostCSS](https://flaviocopes.com/tailwind-setup/) y [Tailwind CSS Laravel Mix Starter Project](https://github.com/parfaitementweb/tailwind-mix-starter). En está última me gustó la idea de utilizar [Laravel Mix](https://laravel-mix.com/) pero tiene problemas con las versiones asi que me aventuré a hacer mi propio starter [HTML Tailwind Alpine Mix](https://github.com/dsoto-blog/html-tailwind-alpine-mix), cosa que no es mi estilo porque realmente soy una fan del copia y pega, no me gusta reinventar la rueda.
 
 
 ### DM;MD
 
-Para comenzar solo clonamos, instalamos paquetería y arrancamos el server
+Para usar el proyecto solo clonamos, instalamos paquetería y arrancamos el server
 
 ```bash
  git clone https://github.com/dsoto-blog/html-tailwind-alpine-mix.git
@@ -37,7 +37,7 @@ Para comenzar solo clonamos, instalamos paquetería y arrancamos el server
  npm run watch # or yarn watch
 ```
 
-🎉Listo!!! Ya puedes ponerte a jugar.
+🎉Listo!!! Ya puedes ponerte a jugar, ve edita el public/index.html tanto como quieras.
 
 ### Y ahora un poco de muela
 
@@ -104,11 +104,10 @@ En el javascript definimos las variables y funciones necesarias. Como puedes ver
             },
 
             toggleClassTheme(){
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && 
-                    window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                        document.documentElement.classList.add('dark')
-                    } else {
-                        document.documentElement.classList.remove('dark')
+                if (localStorage.theme === 'dark') {
+                    document.documentElement.classList.add('dark')
+                } else {
+                    document.documentElement.classList.remove('dark')
                 }   
             },
             
@@ -119,5 +118,7 @@ En el javascript definimos las variables y funciones necesarias. Como puedes ver
     }
 ```
 
+El proyecto puedes [verlo funcionando](https://html-tailwind-alpine-starter.dsoto.dev/)
+ 
 Esto es solo el proyecto base que utilizaré en varios ejemplos que tengan como herramientas solo Tailwind y Alpine. Vas a poder aprender haciendo.
 
