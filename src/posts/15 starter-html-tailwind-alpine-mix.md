@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML Tailwind Alpinejs Mix Starter
-excerpt: Juega y aprende con 
+excerpt: El punto de partida para aprender Tailwind y Alpine.
 date: 2021-03-02
 tags: post
 ---
@@ -90,32 +90,32 @@ Dentro del componente tenemos un botón que al darle click llama una función qu
 En el javascript definimos las variables y funciones necesarias. Como puedes ver la variable `theme` se guarda en el localStorage para recordarla en próximas visitas. Espero que , solo puntualizar que con `this.$watch` le damos seguimiento a la variable `theme` para que cada vez que cambie actualizamos el localStorage y agregamos/eliminamos la clase _'dark'_ del documento _HTML_ con la función `toggleClassTheme()`
 
 ```js
-    function app(){
-        return {
-            theme: localStorage.theme,
+function app(){
+    return {
+        theme: localStorage.theme,
 
-            // Inicializamos el componente 
-            setup() {
-                this.toggleClassTheme() 
-                this.$watch('theme', val => {
-                    localStorage.setItem('theme',val)
-                    this.toggleClassTheme()
-                })
-            },
+        // Inicializamos el componente 
+        setup() {
+            this.toggleClassTheme() 
+            this.$watch('theme', val => {
+                localStorage.setItem('theme',val)
+                this.toggleClassTheme()
+            })
+        },
 
-            toggleClassTheme(){
-                if (localStorage.theme === 'dark') {
-                    document.documentElement.classList.add('dark')
-                } else {
-                    document.documentElement.classList.remove('dark')
-                }   
-            },
-            
-            toggleTheme() {
-                this.theme = (this.theme === 'dark') ? '' : 'dark'
-            }
+        toggleClassTheme(){
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }   
+        },
+        
+        toggleTheme() {
+            this.theme = (this.theme === 'dark') ? '' : 'dark'
         }
     }
+}
 ```
 
 El proyecto puedes [verlo funcionando](https://html-tailwind-alpine-starter.dsoto.dev/)
