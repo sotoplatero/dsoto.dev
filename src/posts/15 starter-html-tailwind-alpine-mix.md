@@ -6,7 +6,7 @@ date: 2021-03-02
 tags: post
 ---
 
-Quiero presentarte un _starter_ muy sencillo pero potente que te permitirá comenzar a jugar con tailwind y [alpine](). Alpine es el complemento js perfecto para tailwindcss además que te permitirá crear aplicaciones reactivas increíbles de forma muy rápida sin tanto virtual dom, build y el copón divino.
+Quiero presentarte un _starter_ muy sencillo pero potente que te permitirá comenzar a jugar con tailwind y [alpine](). Alpine es el complemento js perfecto para tailwindcss además que te prodrás crear aplicaciones reactivas increíbles de forma muy rápida sin tanto virtual dom, build y el copón divino.
 
 Lo primero es que no soy experto, ni maestro ni guru; esto es solo mi experiencia, mis gustos, mis errores y puede ser que te ayuden a dar pasos mas rápido y más largos.
 
