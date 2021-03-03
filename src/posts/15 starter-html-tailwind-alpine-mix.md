@@ -4,12 +4,11 @@ title: HTML Tailwind Alpinejs Mix Starter
 excerpt: Juega y aprende con 
 date: 2021-03-02
 tags: post
-draft: true
 ---
 
 Quiero presentarte un _starter_ muy sencillo pero potente que te permitirá comenzar a jugar con tailwind y [alpine](). Alpine es el complemento js perfecto para tailwindcss además que te permitirá crear aplicaciones reactivas increíbles de forma muy rápida sin tanto virtual dom, build y el copón divino.
 
-Lo primero es que no soy experto, ni maestro ni guru esto es solo mi experiencia, mis gustos, mis errores y si puede ser que te ayuden a dar pasos mas rápido y más largos.
+Lo primero es que no soy experto, ni maestro ni guru; esto es solo mi experiencia, mis gustos, mis errores y puede ser que te ayuden a dar pasos mas rápido y más largos.
 
 ¿Por qué Tailwind? Adam Wathan el creador de Tailwind CSS tiene más razones [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/) para mi gusto:
 
@@ -42,11 +41,11 @@ Para comenzar solo clonamos, instalamos paquetería y arrancamos el server
 
 ### Y ahora un poco de muela
 
-Como primer ejemplo le incluí un poco de código para implementar el modo oscuro con Tailwind.
+Como primer ejemplo le incluí un poco de código para implementar el modo oscuro.
 
 El modo oscuro en el Tailwind es muy sencillo. 
 
-1. En la configuración de Tailwind en el fichero `tailwind.config.j` que está en la raiz del proyecto habilitamos el modo oscuro 
+1. En la configuración de Tailwind en el fichero `tailwind.config.j` que está en la raiz del proyecto habilitamos el modo oscuro mediante clases.
 
 ```js
 // tailwind.config.js
@@ -56,10 +55,12 @@ module.exports = {
 }
 ```
 
-2. Cuando el usuario seleccione el modo oscuro se le agrega la clase `'dark'` en el elemento `<html>`
-3. Definimos los estilos de los elementos para el tema oscuro utilizando el prfijo `dark:` en nuestro caso `<body class="dark:bg-gray-800 dark:text-white transition">`
+2. Ahora cuando el usuario seleccione el modo oscuro se le agrega la clase `'dark'` al elemento `<html>`
+3. Solo nos falta definir los estilos de los elementos para el tema oscuro utilizando el prefijo `dark:` en nuestro caso `<body class="dark:bg-gray-800 dark:text-white transition">`
 
-Esto es muy sencillo!!!. En el `public/index.html` está el componente que incializamos con `<div x-data="app()" x-init="setup()" >` con esto definimos un componente Alpine con los variables definidas en `app()` y lo inicializamos en `setup()`. Dentro incluimos un botón que al darle click llama una función para cambiar el tema `x-on:click="toggleTheme"` y luego un `x-show` para muestrar un ícono en base al theme actual.
+Para el switch de temas usamos alpinejs. En el `public/index.html` incializamos el componente `<div x-data="app()" x-init="setup()" >`. Cualquier elemento html será un componente solo con agregarle la etiqueta `x-data` y su valor definirá las variables del mismo. En este caso creamos una función javascript `app()` que devuelve las variables y en `setup()` inicializamos. 
+
+Dentro del componente tenemos un botón que al darle click llama una función que cambia la variable tema `x-on:click="toggleTheme"` y luego un `x-show` para mostrar un ícono en base al tema actual.
 
 ```html
     <div x-data="app()" x-init="setup()" >
@@ -86,19 +87,22 @@ Esto es muy sencillo!!!. En el `public/index.html` está el componente que incia
     </div>
 ```
 
-En el javascript definimos las variables y funciones necesarias. Como puedes ver la variable `theme` se guarda en el localStorage para recordarla en proximas visitas. Todo claro, solo puntualizar que con `this.$watch` le damos seguimiento a la variable `theme` para que cada vez que cambie actualizamos el localStorage y agregamos/eliminamos la clase _'dark'_ del documento _HTML_ con la función `toggleClassTheme()`
+En el javascript definimos las variables y funciones necesarias. Como puedes ver la variable `theme` se guarda en el localStorage para recordarla en próximas visitas. Espero que , solo puntualizar que con `this.$watch` le damos seguimiento a la variable `theme` para que cada vez que cambie actualizamos el localStorage y agregamos/eliminamos la clase _'dark'_ del documento _HTML_ con la función `toggleClassTheme()`
 
 ```js
     function app(){
         return {
             theme: localStorage.theme,
+
+            // Inicializamos el componente 
             setup() {
-                this.toggleClassTheme()
+                this.toggleClassTheme() 
                 this.$watch('theme', val => {
                     localStorage.setItem('theme',val)
                     this.toggleClassTheme()
                 })
             },
+
             toggleClassTheme(){
                 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && 
                     window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -107,6 +111,7 @@ En el javascript definimos las variables y funciones necesarias. Como puedes ver
                         document.documentElement.classList.remove('dark')
                 }   
             },
+            
             toggleTheme() {
                 this.theme = (this.theme === 'dark') ? '' : 'dark'
             }
@@ -114,5 +119,5 @@ En el javascript definimos las variables y funciones necesarias. Como puedes ver
     }
 ```
 
-Esto es solo el comienzo así que e
+Esto es solo el proyecto base que utilizaré en varios ejemplos que tengan como herramientas solo Tailwind y Alpine. Vas a poder aprender haciendo.
 
